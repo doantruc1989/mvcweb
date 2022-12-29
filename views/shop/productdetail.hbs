@@ -1,0 +1,17 @@
+<div class="container" style="margin-top: 200px;">
+    <div class="row" style="justify-content: center;">
+        <div class="card" style="width: 600px;">
+            <img class="card-img-top" src="{{product.imagePath}}">
+            <div class="card-body">
+                <h5>{{product.title}}</h5>
+                <p class="card-text">{{product.description}}</p>
+                <div class="btn-group" style="display: flex ;justify-content:space-between">
+                    <form action="/add-to-cart/{{product._id}}" method="get">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Cart</button>
+                    </form>
+                    <b>${{product.price}}</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

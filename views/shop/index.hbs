@@ -1,0 +1,1603 @@
+<div class="container" style="margin-top: 200px;">
+    <div class="col-lg-7 mx-auto text-center mb-6" style="margin-bottom: 50px;">
+        <h1 class="fs-3 fs-lg-5 lh-sm mb-3" style="color: white;">Hot Hot Hot!!!</h1>
+    </div>
+
+    <div class="row">
+        {{#each products}}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm" style="height: 500px;">
+                <a href="/product/{{_id}}">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="350" src="{{imagePath}}">
+                </a>
+                <div class="card-body">
+                    <a href="/product/{{_id}}">
+                        <h5>{{title}}</h5>
+                    </a>
+                    <h6>{{description}}</h6>
+                    <p class="card-text"></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a class="btn btn-sm btn-outline-secondary" href="/product/{{_id}}">Detail</a>
+                        </div>
+
+                        <div class="btn-group">
+                            <form action="/add-to-cart/{{_id}}" method="get">
+                                <button type="submit" class="btn btn-sm btn-outline-secondary">Cart</button>
+
+                            </form>
+                        </div>
+
+                        <small class="text-muted text-right">
+                            <s></s>
+                            <b>${{price}}</b>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class="container" style="margin-top: 100px;">
+
+    <div class="row h-100">
+
+        <div class="col-lg-7 mx-auto text-center mb-6">
+            <h1 class="fs-3 fs-lg-5 lh-sm mb-3" style="color: white;">New Arrivals</h1>
+        </div>
+        <div class="col-12" style="margin-top: 50px;">
+            <div class="carousel slide" id="carouselNewArrivals" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="row h-100 align-items-center g-2">
+                            {{#each first4}}
+                            <div class="col-md-3">
+                                <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                    <a href="/product/{{_id}}">
+                                        <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                            src="{{imagePath}}">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="/product/{{_id}}">
+                                            <h5>{{title}}</h5>
+                                        </a>
+
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row h-100 align-items-center g-2">
+                            {{#each first4}}
+                            <div class="col-md-3">
+                                <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                    <a href="/product/{{_id}}">
+                                        <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                            src="{{imagePath}}">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="/product/{{_id}}">
+                                            <h5>{{title}}</h5>
+                                        </a>
+
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="row h-100 align-items-center g-2">
+                            {{#each first4}}
+                            <div class="col-md-3">
+                                <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                    <a href="/product/{{_id}}">
+                                        <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                            src="{{imagePath}}">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="/product/{{_id}}">
+                                            <h5>{{title}}</h5>
+                                        </a>
+
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row h-100 align-items-center g-2">
+                            {{#each first4}}
+                            <div class="col-md-3">
+                                <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                    <a href="/product/{{_id}}">
+                                        <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                            src="{{imagePath}}">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="/product/{{_id}}">
+                                            <h5>{{title}}</h5>
+                                        </a>
+
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselNewArrivals"
+                            data-bs-slide="prev"><span class="carousel-control-prev-icon"
+                                aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselNewArrivals"
+                            data-bs-slide="next"><span class="carousel-control-next-icon"
+                                aria-hidden="true"></span><span class="visually-hidden">Next </span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 100px;">
+    <div class="row h-100">
+        <div class="col-lg-7 mx-auto text-center mb-6" style="margin-bottom: 50px;">
+            <a href="/product" style="text-decoration: none;">
+                <h1 class="fs-3 fs-lg-5 lh-sm mb-3" style="color: white; ">Category</h1>
+            </a>
+        </div>
+        <div class="col-12">
+            <nav>
+
+                <div class="nav nav-tabs majestic-tabs mb-4 justify-content-center" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-xbox-tab" data-bs-toggle="tab" data-bs-target="#nav-xbox"
+                        type="button" role="tab" aria-controls="nav-xbox" aria-selected="true">Xbox</button>
+                    <button class="nav-link" id="nav-men-tab" data-bs-toggle="tab" data-bs-target="#nav-men"
+                        type="button" role="tab" aria-controls="nav-men" aria-selected="false">Play
+                        Station</button>
+                    <button class="nav-link" id="nav-men-tab" data-bs-toggle="tab" data-bs-target="#nav-men"
+                        type="button" role="tab" aria-controls="nav-men" aria-selected="false">Nintendo</button>
+                    <button class="nav-link" id="nav-men-tab" data-bs-toggle="tab" data-bs-target="#nav-men"
+                        type="button" role="tab" aria-controls="nav-men" aria-selected="false">Wii</button>
+                </div>
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-xbox" role="tabpanel" aria-labelledby="nav-xbox-tab">
+                        <ul class="nav nav-pills justify-content-center mb-5" id="pills-tab-xbox" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-wtshirt-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-wtshirt" type="button" role="tab"
+                                    aria-controls="pills-wtshirt" aria-selected="true">Strategy</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-dresses-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-dresses" type="button" role="tab"
+                                    aria-controls="pills-dresses" aria-selected="false">Role-Playing</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-wshoes-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-wshoes" type="button" role="tab" aria-controls="pills-wshoes"
+                                    aria-selected="false">Sport</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-wwatch-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-wwatch" type="button" role="tab" aria-controls="pills-wwatch"
+                                    aria-selected="false">Puzzle </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-wsunglasses-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-wsunglasses" type="button" role="tab"
+                                    aria-controls="pills-wsunglasses" aria-selected="false">Action </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-wbagpacks-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-wbagpacks" type="button" role="tab"
+                                    aria-controls="pills-wbagpacks" aria-selected="false">Casino </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContentWomen">
+                            <div class="tab-pane fade" id="pills-dresses" role="tabpanel"
+                                aria-labelledby="pills-dresses-tab">
+                                <div class="carousel slide" id="carouselCategoryDresses" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+
+
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryDresses" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryDresses" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                            <div class="tab-pane fade show active" id="pills-wtshirt" role="tabpanel"
+                                aria-labelledby="pills-wtshirt-tab">
+                                <div class="carousel slide" id="carouselCategoryWTshirt" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryWTshirt" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryWTshirt" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-wshoes" role="tabpanel"
+                                aria-labelledby="pills-wshoes-tab">
+                                <div class="carousel slide" id="carouselCategoryWShoes" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryWShoes" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryWShoes" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-wwatch" role="tabpanel"
+                                aria-labelledby="pills-wwatch-tab">
+                                <div class="carousel slide" id="carouselCategoryWwatch" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryWwatch" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryWwatch" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-wsunglasses" role="tabpanel"
+                                aria-labelledby="pills-wsunglasses-tab">
+                                <div class="carousel slide" id="carouselCategoryWSunglasses" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryWSunglasses" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryWSunglasses" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-wbagpacks" role="tabpanel"
+                                aria-labelledby="pills-wbagpacks-tab">
+                                <div class="carousel slide" id="carouselCategoryWBagpacks" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryWBagpacks" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryWBagpacks" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-men" role="tabpanel" aria-labelledby="nav-men-tab">
+                        <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab-men" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-tshirt-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-tshirt" type="button" role="tab" aria-controls="pills-tshirt"
+                                    aria-selected="true">T-Shirt</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-shirt-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-shirt" type="button" role="tab" aria-controls="pills-shirt"
+                                    aria-selected="false">Shirt</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-shoes-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-shoes" type="button" role="tab" aria-controls="pills-shoes"
+                                    aria-selected="false">Shoes</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-watch-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-watch" type="button" role="tab" aria-controls="pills-watch"
+                                    aria-selected="false">Watch </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-sunglasses-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-sunglasses" type="button" role="tab"
+                                    aria-controls="pills-sunglasses" aria-selected="false">Sunglasses </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-bagpacks-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-bagpacks" type="button" role="tab"
+                                    aria-controls="pills-bagpacks" aria-selected="false">Bagpacks </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContentMen">
+                            <div class="tab-pane fade show active" id="pills-tshirt" role="tabpanel"
+                                aria-labelledby="pills-tshirt-tab">
+                                <div class="carousel slide" id="carouselCategoryTshirt" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryTshirt" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryTshirt" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-shirt" role="tabpanel"
+                                aria-labelledby="pills-shirt-tab">
+                                <div class="carousel slide" id="carouselCategoryShirt" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryShirt" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryShirt" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-shoes" role="tabpanel"
+                                aria-labelledby="pills-shoes-tab">
+                                <div class="carousel slide" id="carouselCategoryShoes" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryShoes" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryShoes" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-watch" role="tabpanel"
+                                aria-labelledby="pills-watch-tab">
+                                <div class="carousel slide" id="carouselCategoryWatch" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryWatch" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryWatch" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-sunglasses" role="tabpanel"
+                                aria-labelledby="pills-sunglasses-tab">
+                                <div class="carousel slide" id="carouselCategorySunglasses" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategorySunglasses" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategorySunglasses" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-bagpacks" role="tabpanel"
+                                aria-labelledby="pills-bagpacks-tab">
+                                <div class="carousel slide" id="carouselCategoryBagpacks" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="5000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="3000">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row h-100 align-items-center g-2">
+                                                {{#each first4}}
+                                                <div class="col-md-3">
+                                                    <div class="card mb-3 shadow-sm" style="height: 400px;">
+                                                        <a href="/product/{{_id}}">
+                                                            <img class="bd-placeholder-img card-img-top" width="100%"
+                                                                height="350" src="{{imagePath}}">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <a href="/product/{{_id}}">
+                                                                <h5>{{title}}</h5>
+                                                            </a>
+
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselCategoryBagpacks" data-bs-slide="prev"><span
+                                                    class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Previous</span></button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselCategoryBagpacks" data-bs-slide="next"><span
+                                                    class="carousel-control-next-icon" aria-hidden="true"></span><span
+                                                    class="visually-hidden">Next
+                                                </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark"
+                                        href="/product">View All </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="margin-top: 100px;">
+    <div class="row">
+        <div class="col-12">
+            <div class="carousel slide carousel-fade" id="carouseCta" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="row h-100 align-items-center g-2">
+                            <div class="col-12">
+                                <div class="text-light text-center py-2">
+                                    <h5 class="display-4 fw-normal text-400 fw-normal mb-4"
+                                        style="text-shadow: 3px 2px black;">visit our Shop in
+                                    </h5>
+                                    <h1 class="display-1 text-white fw-normal mb-8"
+                                        style="text-shadow: 3px 2px purple;">
+                                        SAI GON</h1><a class="btn btn-lg text-light fs-1" href="#!" role="button"
+                                        style="text-shadow: 3px 2px black;">See Addresses
+                                        <svg class="bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg"
+                                            width="23" height="23" fill="currentColor" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
+                                            </path>
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row h-100 align-items-center g-2">
+                            <div class="col-12">
+                                <div class="text-light text-center py-2">
+                                    <h5 class="display-4 fw-normal text-400 fw-normal mb-4"
+                                        style="text-shadow: 3px 2px black;">visit our Shop in
+                                    </h5>
+                                    <h1 class="display-1 text-white fw-normal mb-8"
+                                        style="text-shadow: 3px 2px purple;">
+                                        DA NANG</h1><a class="btn btn-lg text-light fs-1" href="#!" role="button"
+                                        style="text-shadow: 3px 2px black;">See Addresses
+                                        <svg class="bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg"
+                                            width="23" height="23" fill="currentColor" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
+                                            </path>
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="row h-100 align-items-center g-2">
+                            <div class="col-12">
+                                <div class="text-light text-center py-2">
+                                    <h5 class="display-4 fw-normal text-400 fw-normal mb-4"
+                                        style="text-shadow: 3px 2px black;">visit our Shop in
+                                    </h5>
+                                    <h1 class="display-1 text-white fw-normal mb-8"
+                                        style="text-shadow: 3px 2px purple;">
+                                        HA NOI</h1><a class="btn btn-lg text-light fs-1" href="#!" role="button"
+                                        style="text-shadow: 3px 2px black;">See Addresses
+                                        <svg class="bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg"
+                                            width="23" height="23" fill="currentColor" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
+                                            </path>
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouseCta"
+                            data-bs-slide="prev"><span class="carousel-control-prev-icon"
+                                aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouseCta"
+                            data-bs-slide="next"><span class="carousel-control-next-icon"
+                                aria-hidden="true"></span><span class="visually-hidden">Next </span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="width: 500px; height: 350px">
+    <iframe class="position-relative rounded w-100 h-100"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+        frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" style="filter: border: 0;"></iframe>
+
+
+</div>

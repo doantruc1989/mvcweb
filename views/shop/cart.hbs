@@ -1,0 +1,72 @@
+<main role="main" style="margin: 150px;">
+    <div class="container mt-4">
+        {{# if products }}
+        <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <h1 class="text-center" style="color: white;margin-bottom: 40px;">Your Carts</h1>
+        <div class="row">
+            <form action="/checkout/savecart" method="post">
+                <div class="col col-md-12">
+                    <table class="table table-bordered" style="color: white; background-color: black">
+                        <thead>
+                            <tr>
+                                <th>Ảnh đại diện</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Tổng tiền</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="datarow">
+                            {{#each products}}
+                            <tr>
+                                <td name="imagePath" value="{{ this.item.imagePath }}">
+                                    <img src="{{this.item.imagePath}}" style="width: 250px;height:auto"
+                                        class="hinhdaidien">
+                                </td>
+                                <td>{{this.item.title}}</td>
+                                <td class="text-right" name="quantity" value="{{ this.qty }}">{{ this.qty }}</td>
+                                <td class="text-right" name="price" value="{{ this.price  }}">{{ this.price }}</td>
+                                <td>
+                                    <div class="nav-item">
+                                        <button class="btn btn-primary btn-xs dropdown-toggle" type="button"
+                                            data-toggle="dropdown" onclick="subtract()">Action <span
+                                                class="caret"></span></button>
+                                        {{!-- <ul class="dropdown-content">
+                                            <li class="dropdown-item"><a href="#">Reduce by 1</a></li>
+                                            <li class="dropdown-item"><a href="#">Remove All</a></li>
+                                        </ul> --}}
+                                    </div>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+
+                    <div class="row">
+                        <div style="display: flex ;justify-content: right; align-items: center;">
+                            <div name="totalPrice" value="{{ totalPrice }}" style="font-size: 40px; color: white">
+                                <strong>Total: {{
+                                    totalPrice }}</strong>
+                            </div>
+                            <button type="submit" class="btn btn-success" style="margin-left: 40px">Checkout</button>
+                        </div>
+                    </div>
+                    <a href="/" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
+                            aria-hidden="true"></i>&nbsp;Back Home</a>
+                </div>
+            </form>
+        </div>
+        {{ else }}
+        <div class="row">
+
+            <h1 class="text-center" style="color: white;margin-bottom: 40px;">No Items in Cart</h1>
+
+        </div>
+        {{/if}}
+    </div>
+
+</main>
